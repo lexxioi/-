@@ -38,8 +38,17 @@
     opacity: 1;
 }
 
-.anim_img {
-    transform: translate(20px)
+._anim_img {
+    transform-origin: right top;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+._anim_img._active,
+._active._anim_img {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .buttons {
